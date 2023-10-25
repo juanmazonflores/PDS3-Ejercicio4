@@ -4,7 +4,7 @@
       @click="router.push({ name: 'Catalog' })"
       color="primary"
       variant="elevated">
-    Back to catalog
+    Regresar al Catalogo
   </v-btn>
 
   <div class="product">
@@ -15,11 +15,6 @@
       <p>Brand: {{ selectedProduct.brand }}</p>
       <p>Description: {{ selectedProduct.description }}</p>
       <h2>Price: ${{ selectedProduct.price }}</h2>
-      <v-btn
-          variant="elevated"
-          color="indigo-lighten-3"
-          @click="addToCart"
-      >Add to cart</v-btn>
     </div>
   </div>
 </template>
@@ -45,16 +40,14 @@
     return store.products.find((item) => item.id === Number(route.params.id))
   })
 
-  const addToCart = () => {
-    store.addToCart(selectedProduct.value)
-    router.push({ name: 'CartView' })
-  }
 </script>
 
 <style scoped>
 .product {
   display: flex;
   margin-top: 50px;
+  color: var(--color-font3);
+  background-color: var(--color-container2);
 }
 
 .product-image {

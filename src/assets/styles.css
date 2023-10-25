@@ -1,10 +1,197 @@
+/*VARIABLES*/
+:root{
+    --color-font: #fff;
+    --color-font2: #c1e8ff;
+    --color-font3:#0C134F;
+    --color-background: #000000;
+    --color-background2: #0C134F;
+    --color-container: #19376D;
+    --color-container2: #8CABFF;
+    --color-button2: #7DA0CA;
+    --color-button: #0C134F;
+    --font-family: 'Anonymous Pro', monospace;;
+   } 
+
 * {
     margin: 0;
     padding: 0;
 }
 
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 16px;
+.card{
+  background-color: var(--color-container2);
+  color: var(--color-font3);
+ }
+ 
+ .product{
+  background-color: var(--color-container2);
+ }
+
+body{
+    font-family:'Anonymous Pro', monospace; ;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+  }
+  
+    .fx-row {
+  display: flex;
+  flex-direction: row;
 }
+
+.fx-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.fx-align-items-center {
+  align-items: center;
+}
+
+.fx-content-space-between {
+  justify-content: space-between;
+}
+
+.fx-content-center {
+  justify-content: center;
+}
+
+/*SECCIONES*/
+
+section {
+  scroll-margin-top: 90px;
+  padding: 45px 90px;
+}
+section > h1 {
+  color: var(--color-font2);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+}
+
+section#habilidades,footer {
+  background: url("../img/fondos/home3.gif") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/*HEADER*/
+
+
+#menu{
+  display: none;
+}
+
+.menu-icono{
+  width: 25px;
+}
+
+.menu label{
+  cursor: pointer;
+  display: none;
+}
+
+header {
+
+  width: 100%;
+  height: 90px;
+  background-color: #000000;
+  opacity: 0.9;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.10);
+  z-index: 1;
+}
+
+#contacto {
+  margin: 10px;
+  width: auto;
+  padding: 5px;
+}
+
+#logo img{
+  width: 275px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+nav {
+  height: 50px;
+  font-size: 1.25rem;
+}
+nav ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+nav li {
+  padding: 0.75rem 2rem;
+  font-weight: 300;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-font2);
+}
+
+nav ul li:hover{
+  color: var(--color-font);
+  cursor: pointer;
+  background-color: var(--color-button);
+}
+
+.product{
+ background-color: #19376D;
+}
+
+/*H0ME*/
+#home {
+    height: 100vh;
+    background-size: cover;
+    color: var(--color-font);
+    background: url("../assets/fondos/paisaje2.avif") no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .home-banner {
+    opacity: 0.8;
+    padding: 7rem 10rem;
+    z-index: 1;
+    background-color: var(--color-container);
+    text-align: center;
+  }
+  
+  .home-banner > h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    width: 200px;
+    height: 100px;
+  }
+  
+  .home-banner > h3 {
+    font-size: 1.5rem;
+  }
+  
+  .home-banner > p {
+    width: 5rem;
+  }
+
+  .scene{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#111425,#3751e0);
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  
+  .forest{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index:1000;
+    transform: scale(1.2);
+  }
+  
+  .pfp{
+    position: relative;
+    width: 30%;
+    z-index:1;
+  }

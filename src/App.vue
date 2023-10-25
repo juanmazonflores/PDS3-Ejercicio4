@@ -1,15 +1,6 @@
 <template>
   <header>
-
-    <v-toolbar title="Application">
-      <v-btn
-          @click="router.push({ name: 'CartView' })"
-          color="primary"
-          variant="elevated"
-
-      >Items in Cart: {{ store.cart.length }}
-      </v-btn>
-    </v-toolbar>
+    <nav-bar></nav-bar>
   </header>
   <main>
     <RouterView />
@@ -19,18 +10,13 @@
 <script setup>
   import { useRouter } from "vue-router";
   import { productsStore } from "@/stores/products";
+  import NavBar  from "./components/NavBar.vue";
 
   const router = useRouter()
   const store = productsStore()
 </script>
 
 
-<style scoped>
-.cart-items {
-  text-align: end;
-  padding: 16px;
-  font-weight: bold;
-  font-size: 24px;
-  cursor: pointer;
-}
+<style>
+@import  "./assets/styles.css";
 </style>

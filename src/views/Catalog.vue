@@ -1,21 +1,17 @@
 <template>
   <div class="products-list">
-    <v-text-field clearable label="Label" prepend-icon="$vuetify"></v-text-field>
     <v-row no-gutters>
       <v-col
           v-for="product in store.products"
           :key="product.id"
-          cols="12"
+          cols="3"
           sm="4"
-          @click="goToProductPage(product.id)"
-      >
+          @click="goToProductPage(product.id)">
         <product-item
             :product-data="product"
-            @item-clicked="goToProductPage"
-        />
+            @item-clicked="goToProductPage"/>
       </v-col>
     </v-row>
-
     </div>
 </template>
 
@@ -43,13 +39,20 @@
   const goToProductPage = (id) => {
     router.push({ name: 'ProductView', params: { id } })
   }
-
-
+  
   onMounted(async () => {
     await store.fetchProductsFromDB()
   })
 </script>
 
 <style scoped>
+  .card{
+ background-color: var(--color-container);
+ color: var(--color-font3);
+}
 
+.product{
+ background-color: var(--color-container2);
+}
 </style>
+

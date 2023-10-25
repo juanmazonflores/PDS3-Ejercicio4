@@ -1,13 +1,10 @@
 <template>
-  <v-sheet class="ma-2 pa-2">
-    <v-card
-        class="product"
-    >
+  <v-sheet class="ma-2 pa-2 card">
+    <v-card class="product">
       <v-img
           :src="props.productData.thumbnail"
           height="200px"
-          cover
-      />
+          cover/>
 
       <v-card-title>
         {{ props.productData.brand }}
@@ -20,12 +17,6 @@
       <v-card-text>
         {{ props.productData.description }}
       </v-card-text>
-
-      <v-card-actions>
-        <v-btn @click="goToProductPage(props.productData.id)">
-          Add to cart
-        </v-btn>
-      </v-card-actions>
     </v-card>
   </v-sheet>
 </template>
@@ -52,3 +43,10 @@
     emit('item-clicked', productId)
   }
 </script>
+
+<style scoped>
+.product{
+  background-color: var(--color-container2);
+}
+
+</style>
